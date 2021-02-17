@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+    <header>
+        <h1>Wellcome to Jurassic World !</h1>
+        <br />
+        <br />
+        Student Name: Boning Yang
+        <br />
+        <br />
+        @Html.ActionLink("Home", "Index", "Home")&nbsp;
+        @Html.ActionLink("10 Green Bottles", "Razor", "Home")&nbsp;
+        @Html.ActionLink("Create Person", "CreatePerson", "Home")&nbsp;
+        @Html.ActionLink("Error", "Error", "Home")&nbsp;
+    </header>
+    <div class="content">
+        @RenderBody()
+    </div>
+    <footer style="font-size: 18px">
+        <h3>CSS & Layout</h3>
+        <ul>
+            <li>
+                Layout gives us the same style of visual content so that we don't need implement again on each page.
+                <br />
+                <br />
+            <li>
+                To create a css file, right click main project-add-new folder-name 'wwwroot',do same folder called 'css' under wwwroot,then add-new item stylesheet under css.
+                <br />
+                <br />
+            <li>
+                As for _Layout file, do same way under 'Views', create folder 'Shared', then create _Layout under Shared.
+                <br />
+                <br />
+            <li>
+                The default web root folder of ASP.NET Core project is wwwroot, that is why we put css file under it, which path is 'wwwroot/css/StyleSheet.css'.
+                <br />
+                <br />
+            <li>
+                There are more than one layout for applications to take. Consequently, layout files typically place under Views/Shared.
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

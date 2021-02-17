@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = "_Layout";
+    ViewData["Title"] ="Count Bottles";
+    var i = 0;
+    var number = Convert.ToInt32(@ViewData["num"]);
+}
+
+<form asp-controller="Home" asp-action="PlayAgain" method="post">
+    <input type="submit" value="Try Again" />
+</form>
+
+    @for (i = number; i >= 1; i--)
+{
+    @if (number >= 50 && number <= 100)
+    {
+    <p>@i green bottles hanging on wall,</p>
+    <p>@i green bottles hanging on wall,</p>
+    <p>And if one green bottle should accidently fall,</p>
+    <p>There will be @(i-1) green bottles hanging on wall</p>
+    <br />
+    <br />
+    }
+    @if (i == 1)
+    {
+    <p>There is no green bottle stading on the wall</p>
+    }
+
+}
+<form asp-controller="Home" asp-action="PlayAgain" method="post">
+    <input type="submit" value="Try Again" />
+</form>
+
+
+
+
